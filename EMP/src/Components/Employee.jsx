@@ -19,15 +19,20 @@ const Employee = () => {
       .catch((err) => console.log(err));
   }, []);
   const handleDelete = (id) => {
-    axios.delete('http://localhost:3000/auth/delete_employee/'+id)
-    .then(result => {
-        if(result.data.Status) {
-            window.location.reload()
-        } else {
-            alert(result.data.Error)
-        }
-    })
-  } 
+    const confirmDelete = window.confirm("Are you sure you want to delete this employee?");
+    if (confirmDelete) {
+      axios.delete(`http://localhost:3000/auth/delete_employee/${id}`)
+        .then(result => {
+          if (result.data.Status) {
+            window.location.reload();
+          } else {
+            alert(result.data.Error);
+          }
+        })
+        .catch(err => console.log(err));
+    }
+  };
+
   return (
     <div className="px-5 mt-3">
       <div className="d-flex justify-content-center">

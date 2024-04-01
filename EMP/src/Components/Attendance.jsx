@@ -32,22 +32,6 @@ function Attendance() {
     }));
   };
 
-  // const handleAttendanceSubmit = async () => {
-  //   try {
-  //     const attendanceRecords = [];
-  //     for (const id in attendanceData) {
-  //       attendanceRecords.push({
-  //         emp_id: id,
-  //         status: attendanceData[id],
-  //         date: selectedDate,
-  //       });
-  //     }
-  //     await axios.post('http://localhost:3000/auth/attendance', attendanceRecords);
-  //     console.log('Attendance submitted successfully');
-  //   } catch (error) {
-  //     console.error('Error submitting attendance:', error);
-  //   }
-  // };
   const handleAttendanceSubmit = async () => {
     try {
       const attendanceRecords = [];

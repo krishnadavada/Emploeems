@@ -44,6 +44,7 @@ const Login = () => {
     <div className="login">
     <div className="login-container">
         <h2>Login Page</h2>
+        {error && <div className="alert alert-danger" role="alert">{error}</div>}
         <form onSubmit={handleSubmit}>
             <input type="email" onChange={(e) => setValues({...values, email : e.target.value})} className="form-control" placeholder="Email" />
             <input type="password" onChange={(e) => setValues({...values, password : e.target.value})} className="form-control" placeholder="Password" />

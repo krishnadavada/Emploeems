@@ -66,8 +66,9 @@ const AddEmployee = () => {
               placeholder="Enter Name"
               onChange={(e) =>
                 setEmployee({ ...employee, name: e.target.value })
-              }
+              } required
             />
+            
           </div>
           <div className="col-12">
             <label for="inputEmail4" className="form-label">
@@ -81,7 +82,7 @@ const AddEmployee = () => {
               autoComplete="off"
               onChange={(e) =>
                 setEmployee({ ...employee, email: e.target.value })
-              }
+              } required
             />
           </div>
           <div className="col-12">
@@ -108,7 +109,7 @@ const AddEmployee = () => {
               autoComplete="off"
               onChange={(e) =>
                 setEmployee({ ...employee, salary: e.target.value })
-              }
+              } required
             />
           </div>
           <div className="col-12">
@@ -123,7 +124,7 @@ const AddEmployee = () => {
               autoComplete="off"
               onChange={(e) =>
                 setEmployee({ ...employee, address: e.target.value })
-              }
+              } required
             />
           </div>
           <div className="col-12">
@@ -134,7 +135,7 @@ const AddEmployee = () => {
                 onChange={(e) => setEmployee({...employee, category_id: e.target.value})}>
               {category.map((c) => {
                 return <option value={c.id}>{c.name}</option>;
-              })}
+              })} 
             </select>
           </div>
           <div className="col-12 mb-3">

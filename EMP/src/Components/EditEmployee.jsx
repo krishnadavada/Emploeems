@@ -66,7 +66,7 @@ const EditEmployee = () => {
               value={employee.name}
               onChange={(e) =>
                 setEmployee({ ...employee, name: e.target.value })
-              }
+              } required
             />
           </div>
           <div className="col-12">
@@ -82,7 +82,7 @@ const EditEmployee = () => {
               value={employee.email}
               onChange={(e) =>
                 setEmployee({ ...employee, email: e.target.value })
-              }
+              } required
             />
           </div>
           <div className='col-12'>
@@ -98,7 +98,7 @@ const EditEmployee = () => {
               value={employee.salary}
               onChange={(e) =>
                 setEmployee({ ...employee, salary: e.target.value })
-              }
+              } required
             />
           </div>
           <div className="col-12">
@@ -114,8 +114,8 @@ const EditEmployee = () => {
               value={employee.address}
               onChange={(e) =>
                 setEmployee({ ...employee, address: e.target.value })
-              }
-            />
+              } required
+            /> 
           </div>
           <div className="col-12">
             <label for="category" className="form-label">

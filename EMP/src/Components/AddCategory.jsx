@@ -26,7 +26,7 @@ const AddCategory = () => {
                 <div className='mb-3'>
                     <label htmlFor="category" className='mb-3'><strong>Category:</strong></label>
                     <input type="text" name='category' placeholder='Enter Category' style={{'backgroundColor':'#DBEEF0'}}
-                     onChange={(e) => setCategory(e.target.value)} className='form-control rounded-0'/>
+                     onChange={(e) => setCategory(e.target.value)} className='form-control rounded-0' required/>
                 </div>
                 <button className='btn btn-info w-100 rounded-0 mb-2'>Add Category</button>
             </form>
